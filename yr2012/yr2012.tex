@@ -204,10 +204,29 @@ Nikto2
 }
 
 \section{Organizer side}
-\subsection{Tasks}
-\frame
+\subsection{Example from RuCTF 2012 Quals}
+\frame[containsverbatim]
 {
 \frametitle{Demo}
+\footnotesize{
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{sub }\PY{n+nf}{f}\PY{p}{(@d)\PYZob{}}
+ \PY{k}{return} \PY{l+m+mi}{0} \PY{k}{unless} \PY{n+nv}{@}\PY{n+nv}{d}\PY{p}{;}
+ \PY{k}{my} \PY{n+nv}{\PYZdl{}}\PY{n+nv}{n} \PY{o}{=} \PY{n+nv}{@}\PY{n+nv}{d}\PY{o}{.}\PY{n}{elems}\PY{p}{;}
+
+ \PY{k}{my} \PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{;}
+ \PY{n+nb}{push} \PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{,} \PY{p}{[}\PY{l+m+mh}{0x100500} \PY{n}{xx} \PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}\PY{p}{]} \PY{k}{for} \PY{l+m+mi}{0}\PY{o}{..}\PY{o}{\PYZca{}}\PY{l+m+mi}{1}\PY{o}{+}\PY{o}{\PYZlt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}\PY{p}{;}
+ \PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{;}
+
+ \PY{k}{return} \PY{p}{[}\PY{n}{min}\PY{p}{]}\PY{n}{gather} \PY{k}{for} \PY{l+m+mi}{1}\PY{p}{,}\PY{o}{*}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{...}\PY{l+m+mi}{1}\PY{o}{+}\PY{o}{\PYZlt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}\PY{o}{-}\PY{l+m+mi}{1} \PY{o}{-}\PY{o}{\PYZgt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{p}{\PYZob{}}
+  \PY{k}{for} \PY{p}{(}\PY{l+m+mi}{1}\PY{o}{..}\PY{o}{\PYZca{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}\PY{p}{)}\PY{o}{.}\PY{n+nb}{grep}\PY{p}{(}\PY{p}{\PYZob{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{o}{+}\PY{o}{\PYZam{}}\PY{l+m+mi}{1}\PY{o}{+}\PY{o}{\PYZlt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{p}{\PYZcb{}}\PY{p}{)}\PY{n}{X}\PY{p}{(}\PY{l+m+mi}{0}\PY{o}{..}\PY{o}{\PYZca{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}\PY{p}{)}\PY{o}{.}\PY{n+nb}{grep}\PY{p}{(}\PY{p}{\PYZob{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{o}{+}\PY{o}{\PYZam{}}\PY{l+m+mi}{1}\PY{o}{+}\PY{o}{\PYZlt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{p}{\PYZcb{}}\PY{p}{)} \PY{o}{-}\PY{o}{\PYZgt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{z}\PY{p}{,}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{c}\PY{p}{\PYZob{}}
+   \PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{p}{]}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{z}\PY{p}{]}\PY{o}{=}\PY{p}{[}\PY{n}{min}\PY{p}{]}\PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{p}{]}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{z}\PY{p}{]}\PY{p}{,}\PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{x}\PY{o}{+}\PY{o}{\PYZca{}}\PY{l+m+mi}{1}\PY{o}{+}\PY{o}{\PYZlt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{z}\PY{p}{]}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{c}\PY{p}{]}\PY{p}{,}\PY{n+nv}{@}\PY{n+nv}{d}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{c}\PY{p}{]}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{z}\PY{p}{]}
+  \PY{p}{\PYZcb{}}
+  \PY{n}{take} \PY{n+nv}{@}\PY{n+nv}{p}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{+}\PY{o}{\PYZlt{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}\PY{o}{-}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{\PYZus{}}\PY{p}{]}\PY{o}{+}\PY{n+nv}{@}\PY{n+nv}{d}\PY{p}{[}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{o}{\PYZca{}}\PY{n+nv}{\PYZdl{}}\PY{n+nv}{n}
+ \PY{p}{\PYZcb{}}
+\PY{p}{\PYZcb{}}
+\end{Verbatim}
+}
 }
 
 \subsection{Services}
@@ -234,7 +253,7 @@ Nikto2
 \item Exploitfarm: http://code.google.com/p/exploitfarm/
 \item CIPHER Gameserver: http://www.cipher-ctf.org/Gameserver.php
 \item This talk: https://speakerdeck.com/u/sromanov/p/perl-is-for-pwn
-\item @SR0MAN0V (yes, zeros instead of "O"s)
+\item Twitter: @SR0MAN0V (yes, zeros instead of "O"s)
 }
 
 \frame
