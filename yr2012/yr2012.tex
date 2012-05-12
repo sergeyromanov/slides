@@ -111,6 +111,7 @@
 \begin{itemize}
 \item Sergey Romanov (sromanov on irc.perl.org)
 \item Do Perl for fun (also, for living)
+\item PeterPEN CTF team (SPbSU)
 \item Like alpacas
 \end{itemize}
 \begin{figure}
@@ -123,31 +124,44 @@
 \subsection{What's it all about}
 \frame
 {
-\frametitle{CTF}
+\frametitle{What is CTF anyway?}
 \begin{itemize}
-\item Capture the Flag (CTF) is a computer security wargame
-\item CTF was popularized by the hacker conference DEFCON
-\item Two basic types of competition
+\item<1-> Capture the Flag (CTF) is a computer security wargame
+\item<2-> CTF was popularized by DEFCON conference 
+\linebreak
+
+{\Large How many of you heard of DEFCON?}
+\item<3-> Two basic types of competition
 \end{itemize}
 }
 
 \subsection{Task-based CTF}
 \frame
 {
-\frametitle{Find the key}
+\frametitle{Type 1: Find the key}
 \begin{itemize}
 \item Teams should solve tasks get points
 \item Different categories: web, reverse, packet analysis, admin, ctb (crack-the-box), cryptography etc etc
-\item Quals are usually task-based
+\item It is common to do a qualification round as task-based CTF.
 \end{itemize}
 }
 
 \subsection{"Classic" CTF}
 \frame
 {
-\frametitle{Steal the flag}
+\frametitle{Type 2: Steal the flag}
+\begin{itemize}
+\item Vulnerable box -- vurtual image with pre-intalled services
+\item Service -- some (vulnerable) application, accessible via network
+\item Flag -- unique string (eg, "[a-z0-9]\{32\}=")
+\end{itemize}
+}
+
+\frame
+{
+\frametitle{Network}
 \begin{figure}
-\includegraphics[width=3in,height=2in]{pics/network.png}
+\includegraphics[width=3.8in,height=2.6in]{pics/network.png}
 \end{figure}
 }
 
@@ -162,16 +176,26 @@
 \end{itemize}
 }
 
+\frame
+{
+\frametitle{Where is Perl actually?}
+\begin{itemize}
+\item Case 1: you're a participant
+\item Case 2: you're an organizer
+\end{itemize}
+}
+
 \section{Participant side}
 
-\subsection{Routine tools}
+\subsection{Tools}
 \frame
 {
 \frametitle{CPAN \& beyond}
 \begin{itemize}
-\item<1-> /usr/bin/lwp-*
-\item<1-> /usr/bin/md5pass
-\item<2-> find out yours: \textbf{grep '/usr/bin/perl' /usr/bin/*}
+\item<1-> helper scripts: text parsing, glue languge etc
+\item<2-> /usr/bin/lwp-*
+\item<2-> /usr/bin/md5pass
+\item<3-> find out yours, eg: \textbf{grep '/usr/bin/perl' /usr/bin/*}
 \end{itemize}
 }
 
@@ -189,6 +213,7 @@ Nikto2
 \frametitle{Nikto2}
 \begin{itemize}
 \item Web server scanner
+\item Tests over 6400 potentially dangerous files/CGIs, checks for outdated versions of over 1200 servers and version specific problems on over 270 servers
 \item Based on libwhisker2 by rain forest puppy (rfp)
 \end{itemize}
 }
@@ -198,16 +223,17 @@ Nikto2
 {
 \frametitle{Exploitfarm}
 \begin{itemize}
+\item Automate process of submitting flags
 \item Written at Hackerdom (USU, Ekaterinburg)
 \item Automate process of collecting flags and submitting them to jury check system.
 \end{itemize}
 }
 
 \section{Organizer side}
-\subsection{Example from RuCTF 2012 Quals}
+\subsection{Tasks}
 \frame[containsverbatim]
 {
-\frametitle{Demo}
+\frametitle{Example from RuCTF 2012 Quals}
 \footnotesize{
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{sub }\PY{n+nf}{f}\PY{p}{(@d)\PYZob{}}
@@ -232,7 +258,13 @@ Nikto2
 \subsection{Services}
 \frame
 {
-\frametitle{Demo}
+\frametitle{(not so) Simple web-services}
+\begin{itemize}
+\item POP3 server (UralCTF 4)
+\item Dating site (RuCTFE 2010)
+\item Picture search engine (RuCTFE 2011)
+\end{itemize}
+
 }
 
 \subsection{Check system}
@@ -249,6 +281,9 @@ Nikto2
 \frame
 {
 \frametitle{Links}
+\item DEFCON CTF: http://www.ddtek.biz/
+\item RuCTF: http://ructf.org
+\item BlackBox: http://blackbox.sibears.ru/
 \item Nikto2: http://cirt.net/nikto2
 \item Exploitfarm: http://code.google.com/p/exploitfarm/
 \item CIPHER Gameserver: http://www.cipher-ctf.org/Gameserver.php
