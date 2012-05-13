@@ -141,8 +141,8 @@
 \frametitle{Type 1: Find the key}
 \begin{itemize}
 \item Teams should solve tasks get points
-\item Different categories: web, reverse, packet analysis, admin, ctb (crack-the-box), cryptography etc etc
-\item It is common to do a qualification round as task-based CTF.
+\item Different categories: web, reverse, packets, admin, ctb (crack-the-box), crypto, stegano etc
+\item It is common to do a qualification round as task-based CTF
 \end{itemize}
 }
 
@@ -151,8 +151,8 @@
 {
 \frametitle{Type 2: Steal the flag}
 \begin{itemize}
-\item Vulnerable box -- vurtual image with pre-intalled services
-\item Service -- some (vulnerable) application, accessible via network
+\item Vulnerable box -- vurtual machine with pre-installed services
+\item Service -- (vulnerable) application, accessible via network
 \item Flag -- unique string (eg, "[a-z0-9]\{32\}=")
 \end{itemize}
 }
@@ -170,8 +170,8 @@
 {
 \frametitle{How about Perl?}
 \begin{itemize}
-\item<1-> Perl is used during CTF game \_heavily\_
-\item<2-> Just like any other modern, popular and convinient tool :)
+\item<1-> Perl can be used during CTF game \_heavily\_
+\item<2-> Just like any other modern, popular and convenient tool :)
 \item<3-> But we'll concentrate on Perl for now
 \end{itemize}
 }
@@ -192,7 +192,7 @@
 {
 \frametitle{CPAN \& beyond}
 \begin{itemize}
-\item<1-> helper scripts: text parsing, glue languge etc
+\item<1-> helper scripts: text parsing, glue language etc
 \item<2-> /usr/bin/lwp-*
 \item<2-> /usr/bin/md5pass
 \item<3-> find out yours, eg: \textbf{grep '/usr/bin/perl' /usr/bin/*}
@@ -230,10 +230,20 @@ Nikto2
 }
 
 \section{Organizer side}
+
+\frame
+{
+\frametitle{Organizing game}
+\center{\Large{Let's make our own CTF}}
+\begin{figure}
+\includegraphics[width=3in,height=2in]{pics/ructf12.jpg}
+\end{figure}
+}
+
 \subsection{Tasks}
 \frame[containsverbatim]
 {
-\frametitle{Example from RuCTF 2012 Quals}
+\frametitle{Task from RuCTF 2012 Quals}
 \footnotesize{
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{sub }\PY{n+nf}{f}\PY{p}{(@d)\PYZob{}}
@@ -271,7 +281,6 @@ Nikto2
 \begin{figure}
 \includegraphics[width=1.4in,height=1.2	in]{pics/usu.jpg}
 \end{figure}
-\center{These guys just know how to cook Perl!}
 }
 
 \subsection{Check system}
@@ -282,19 +291,20 @@ Nikto2
 \item<1-> Written by Lexi Pimenidis, RWTH Aachen
 \item<1-> Gameserver, the Submitserver, and the Scoreserver
 \item<1-> Was used at CIPHER, op3n, UralCTF	etc
+\item<2-> There were no Ubic 6 years ago :)
 \end{itemize}
 }
 
 \frame
 {
 \frametitle{Links}
-\item DEFCON CTF: http://www.ddtek.biz/
+\item DEFCON CTF: http://www.ddtek.biz
 \item RuCTF: http://ructf.org
-\item BlackBox: http://blackbox.sibears.ru/
+\item PeterPEN: http://peterpen-ctf.net
+\item BlackBox: http://blackbox.sibears.ru
 \item Nikto2: http://cirt.net/nikto2
-\item Exploitfarm: http://code.google.com/p/exploitfarm/
+\item Exploitfarm: http://code.google.com/p/exploitfarm
 \item CIPHER Gameserver: http://www.cipher-ctf.org/Gameserver.php
-\item This talk: https://speakerdeck.com/u/sromanov/p/perl-is-for-pwn
 \item Twitter: @SR0MAN0V (yes, zeros instead of "O"s)
 }
 
